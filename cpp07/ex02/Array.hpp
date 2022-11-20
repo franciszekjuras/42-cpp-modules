@@ -13,7 +13,7 @@ public:
 	Array(unsigned int n) : data(new T[n]), arrSize(n)
 	{
 		for (unsigned int i = 0; i < n; ++i)
-			data[i] = T();
+			new(&data[i]) T;
 	}
 
 	~Array()
